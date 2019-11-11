@@ -59,8 +59,8 @@ public class Controller {
             String from = stations_From.getValue();
             String to = stations_To.getValue();
 
-            Double hour= hours.getValue();
-            Double minute=minutes.getValue()/100;
+            double hour= hours.getValue();
+            double minute=minutes.getValue()/100;
             double t=hour+minute;
 
             try{
@@ -80,7 +80,7 @@ public class Controller {
 class SelectRoute {
 
     private Connection connect() {
-        String url = "jdbc:sqlite:C:/Users/PC/Desktop/ExamplesSQL/ass6.db";
+        String url = "jdbc:sqlite:TrainDatabase.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
